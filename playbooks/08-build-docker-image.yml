@@ -1,0 +1,17 @@
+- hosts: production
+  become: true
+  tasks:
+  - yum:
+      name: 
+      - docker
+      state: present
+  - name: Start Docker service
+    service:
+      name: docker
+      state: started
+  - name: Pull docker image
+    community.docker.docker_image:
+      name: maxshen01/movies-db:latest
+      source: pull
+
+
