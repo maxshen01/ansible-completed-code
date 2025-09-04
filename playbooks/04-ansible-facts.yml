@@ -1,0 +1,10 @@
+- hosts: qa
+  tasks:
+    - debug: var=ansible_kernel
+    - debug: var=ansible_hostname
+    - debug: var=ansible_distribution
+    - debug: var=ansible_architecture
+    - debug: var=inventory_hostname
+    - debug: var=groups
+    - debug: var=group_names
+#    - debug: var=hostvars
